@@ -1,0 +1,23 @@
+{
+  "name": "sequelize-orm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andegwa1/sequelize-orm.git"
+  },
+  "author": "Alan N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andegwa1/sequelize-orm/issues"
+  },
+  "homepage": "https://github.com/andegwa1/sequelize-orm#readme",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "sequelize": "^4.39.0"
+  }
+}
