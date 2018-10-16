@@ -18,6 +18,14 @@ module.exports = {
       description: {
         type: Sequelize.TEXT
       },
+      ContextId: {
+        type: Sequelize.UUID,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Contexts',
+          key: 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -35,7 +43,7 @@ module.exports = {
       return queryInterface.createTable('users', { id: Sequelize.INTEGER });
     */
   },
-  
+
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Tasks');
     /*
