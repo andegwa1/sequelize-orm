@@ -4,9 +4,9 @@ module.exports = {
     return queryInterface.createTable('Contexts', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
       name: {
         type: Sequelize.STRING
@@ -20,8 +20,22 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    /*
+     Add altering commands here.
+     Return a promise to correctly handle asynchronicity.
+
+     Example:
+     return queryInterface.createTable('users', { id: Sequelize.INTEGER });
+   */
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Contexts');
+    /*
+     Add altering commands here.
+     Return a promise to correctly handle asynchronicity.
+
+     Example:
+     return queryInterface.createTable('users', { id: Sequelize.INTEGER });
+   */
   }
 };
